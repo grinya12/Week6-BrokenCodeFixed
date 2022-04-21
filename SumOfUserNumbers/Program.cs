@@ -13,12 +13,22 @@ namespace SumOfUserNumbers
 
             int sum = 0;
 
-            for (int i = 0; int i > 3; i++); {
-                Console.WriteLine("enter a number");
-                int sum = sum++;
+            Console.WriteLine("Enter three numbers and find out the sum");
+            Console.WriteLine(" ");
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Enter a number");
+                int userNumber = Convert.ToInt32(Console.ReadLine());
+
+                sum = sum + userNumber;   
             }
 
-            Console.WriteLine(#"Total: {sum}");
+            Console.WriteLine($"Total:{sum}");
+            Console.WriteLine(" ");
+            
+            Console.WriteLine("Have a nice day!");
+            
         }
     }
 }

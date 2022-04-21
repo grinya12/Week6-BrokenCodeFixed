@@ -18,23 +18,29 @@ namespace DiceGame
             //комментарии к переменным: userThrow - бросок пользователем; cpuScore - бросок компьютера;
 
 
-            Console.WriteLine("user vs computer");
+            Random rnd = new Random();
 
-            rnd Random = Random();
+            int userThrow = rnd.Next(1, 7);
+            int cpuThrow = rnd.Next(1, 7);
 
-            char userThrow = rnd.Next(1, 6);
-            string cpuThrow = rnd.Next(1, 6);
+            Console.WriteLine("Game of dice");
+            Console.WriteLine("User vs Computer");
+            Console.WriteLine(" ");
 
-            if (userThrow > cpuThrow) ;
+            Console.WriteLine($"User throw: {userThrow}");
+            Console.WriteLine($"Cpu throw: {cpuThrow}");
+            Console.WriteLine(" ");
+
+            if (userThrow > cpuThrow)
             {
                 Console.WriteLine("Победил пользователь");
             }
             
-            if(userThrow >= cpuThrow)
+            if(userThrow < cpuThrow)
             {
-                Console.WriteLine("Победил пользователь");
+                Console.WriteLine("Победил компьютер");
             }
-            else if(userThrow = cpuThrow)
+            else
             {
                 Console.WriteLine("Ничья");
             }
